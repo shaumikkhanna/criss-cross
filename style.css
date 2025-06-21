@@ -223,6 +223,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	z-index: 1000;
+	text-align: center;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -235,6 +236,7 @@ body {
 
 /* Base modal styling */
 .modal-content {
+	text-align: center;
 	background-color: #fff;
 	padding: 2rem;
 	border-radius: 12px;
@@ -254,6 +256,7 @@ body {
 	.modal-content {
 		padding: 1rem;
 		font-size: 0.9rem;
+		text-align: center;
 	}
 }
 
@@ -261,6 +264,7 @@ body {
 	font-size: 2.2rem;
 	font-weight: bold;
 	margin-bottom: 1.5rem;
+	text-align: center;
 }
 
 .modal-buttons button {
@@ -352,6 +356,7 @@ body {
 .modal-content h2 {
 	margin-top: 0;
 	font-size: 1.6rem;
+	text-align: center;
 }
 
 .how-to-list {
