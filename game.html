@@ -15,13 +15,13 @@
 			<div class="dice-display">
 				<img
 					id="die1"
-					src="images/dice-1.png"
+					src="images/dice-empty.svg"
 					alt="Die 1"
 					class="dice-img"
 				/>
 				<img
 					id="die2"
-					src="images/dice-1.png"
+					src="images/dice-empty.svg"
 					alt="Die 2"
 					class="dice-img"
 				/>
@@ -50,7 +50,41 @@
 				<div class="modal-buttons">
 					<button id="close-modal">Close</button>
 					<button id="play-again">Play Again</button>
+					<button class="info-button-inline" id="info-button-popup">
+						i
+					</button>
 				</div>
+			</div>
+		</div>
+
+		<!-- How to Play Modal -->
+		<div id="how-to-play-modal" class="modal hidden">
+			<div class="modal-content">
+				<h2>How to Play</h2>
+				<ul class="how-to-list">
+					<li>
+						You will roll two dice, e.g., <strong>3 and 5</strong>.
+					</li>
+					<li>
+						Place these two numbers adjacent (like dominoes) on the
+						5×5 grid — horizontally or vertically.
+					</li>
+					<li>
+						You have <strong>12 rolls</strong> total. If no
+						placement is possible, you skip that roll.
+					</li>
+					<li>After the game ends, each row and column is scored:</li>
+					<ul>
+						<li><strong>2 in a row</strong> = 2 points</li>
+						<li><strong>3 in a row</strong> = 4 points</li>
+						<li><strong>4 in a row</strong> = 8 points</li>
+						<li><strong>5 in a row</strong> = 10 points</li>
+						<li>
+							Multiple runs stack (e.g., 3-3-5-5-5 scores 2 + 4)
+						</li>
+					</ul>
+				</ul>
+				<button id="close-info" class="modal-close">Close</button>
 			</div>
 		</div>
 

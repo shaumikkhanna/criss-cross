@@ -1,7 +1,7 @@
 const gridSize = 5;
 const grid = document.getElementById("grid");
 const statusLine = document.getElementById("status");
-const rollSound = new Audio("sounds/dice_roll.mp3");
+const rollSound = new Audio("sounds/dice-roll.mp3");
 let currentRoll = [];
 let placing = false;
 let previewing = false;
@@ -46,11 +46,28 @@ function launchConfetti() {
 	});
 }
 
+// Create top-controls container
+const topControls = document.createElement("div");
+topControls.className = "top-controls";
+
 // Create Roll Dice button
 const rollButton = document.createElement("button");
 rollButton.textContent = `Roll Dice (1 of 12)`;
 rollButton.className = "roll-button";
-document.querySelector(".game-container").insertBefore(rollButton, statusLine);
+rollButton.id = "roll-button";
+
+// Create Info button
+const infoButton = document.createElement("button");
+infoButton.textContent = "i";
+infoButton.className = "info-button-inline";
+infoButton.id = "info-button";
+
+// Add both buttons to the container
+topControls.appendChild(rollButton);
+topControls.appendChild(infoButton);
+
+// Insert into DOM before the status line
+document.querySelector(".game-container").insertBefore(topControls, statusLine);
 
 rollButton.onclick = () => {
 	if (placing || previewing || turn > 12) return;
@@ -407,3 +424,15 @@ function showFinalScorePopup(score) {
 		location.reload();
 	};
 }
+
+document.getElementById("info-button").onclick = () => {
+	document.getElementById("how-to-play-modal").classList.remove("hidden");
+};
+
+document.getElementById("info-button-popup").onclick = () => {
+	document.getElementById("how-to-play-modal").classList.remove("hidden");
+};
+
+document.getElementById("close-info").onclick = () => {
+	document.getElementById("how-to-play-modal").classList.add("hidden");
+};
